@@ -7,15 +7,11 @@ export const content = [
 export const theme = {
   colors: {
     'white': '#fff',
-    'purple': '#9c27b0',
-    'pink': '#ff49db',
-    'orange': '#faaf52',
-    'green': '#13ce66',
-    'yellow': '#ffc82c',
-    'darkgray': '#777',
-    'gray': '#ddd',
-    'gray-light': '#d3dce6',
-    'customgray': '#2e2e2e',
+    'gray': '#d9d9d9',
+    'lightgray': '#f6f7f9',
+    'blue': '#0d63c9',
+    'orange': '#f05747',
+    'darkblue': '#0F0C63'
   },
   fontFamily: {
     sans: ['Graphik', 'sans-serif'],

@@ -1,0 +1,10 @@
+.circle {
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+}
+
+hr {
+    width: 150px ;
+    color: #e4e4e4 !important;
+}
