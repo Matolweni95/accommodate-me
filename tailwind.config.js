@@ -10,6 +10,7 @@ export const theme = {
     'gray': '#d9d9d9',
     'lightgray': '#f6f7f9',
     'blue': '#0d63c9',
+    'lightblue': '#51C4FF',
     'orange': '#f05747',
     'darkblue': '#0F0C63',
     'discovertext': '#515B6D'
@@ -33,7 +34,7 @@ export const theme = {
       'sm': '13px',
       'base': '15px',
       'base2': '14px',
-      'md': '16px',
+      'md': '20px',
       'lg': '1.125rem',
       'xl': '0.9rem',
       '2xl': '0.98rem',
