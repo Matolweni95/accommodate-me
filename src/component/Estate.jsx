@@ -5,9 +5,9 @@ function Estate() {
     <div className='bg-lightgray'>
         <div className='pt-8 pb-6'>
             <div>
-                <div className='flex flex-col md:flex-row md:justify-between'>
-                    <div className='flex flex-col gap-6 p-7 md:w-3/6 text-base'>
-                        <h1>We’re SA’s number one residence webisite</h1>
+                <div className='flex flex-col md:flex-row md:justify-between lg:justify-around'>
+                    <div className='flex flex-col gap-6 p-7 md:w-3/6 lg:w-1/3 lg:p-0 text-base'>
+                        <h1 className='lg:text-4xl'>We’re SA’s number one residence webisite</h1>
                         <h3>Accommodate me is South Africa's largest residence
                             search portal and is the first place to start your 
                             residence search!
@@ -35,8 +35,8 @@ function Estate() {
                 </div>
                 <div>
                     <div>
-                        <div className='p-7 flex flex-col md:flex-row-reverse md:justify-between'>
-                            <div className='flex flex-col gap-5 md:w-2/5 text-base'>
+                        <div className='p-7 flex flex-col md:flex-row-reverse md:justify-between lg:justify-around'>
+                            <div className='flex flex-col gap-5 md:w-2/5 text-base mb-9'>
                                 <h1>Find a trusted Estate Agent in your area</h1>
                                 <h3>
                                     Find your perfect residence on Accommodate me

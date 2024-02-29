@@ -11,7 +11,8 @@ export const theme = {
     'lightgray': '#f6f7f9',
     'blue': '#0d63c9',
     'orange': '#f05747',
-    'darkblue': '#0F0C63'
+    'darkblue': '#0F0C63',
+    'discovertext': '#515B6D'
   },
   fontFamily: {
     sans: ['Graphik', 'sans-serif'],
@@ -29,15 +30,15 @@ export const theme = {
     },
     fontSize: {
       'xs': '0.75rem',
-      'sm': '0.875rem',
-      'base': '13px',
+      'sm': '13px',
+      'base': '15px',
       'base2': '14px',
       'md': '16px',
       'lg': '1.125rem',
       'xl': '0.9rem',
-      '2xl': '0.278rem',
+      '2xl': '0.98rem',
       '3xl': '1.3rem',
-      '4xl': '2.25rem',
+      '4xl': '2rem',
       '5xl': '3rem',
       '6xl': '4rem',
       // Add more custom sizes as needed
