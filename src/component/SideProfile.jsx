@@ -5,8 +5,8 @@ function SideProfile() {
   return (
     <>
         <div>
-            <div className='bg-gray h-screen  flex justify-center items-center'>
-                <div className='bg-white h-fit flex flex-col w-[300px] gap-3 items-center p-9 rounded-[25px]'>
+            <div className=''>
+                <div className='bg-gray h-fit flex flex-col w-[300px] gap-3 items-center p-9 rounded-[25px]'>
                     <img className='w-[105px] rounded-[100px]' src={hero} alt='avatar'/>
                     <div className='flex flex-col items-center'>
                         <h1 className='text-md'>Masixole Matolweni</h1>

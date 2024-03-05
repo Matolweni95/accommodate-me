@@ -31,3 +31,16 @@
 
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#DA29B7", endColorstr="#962FFF", GradientType=1 );
 }
+
+.orangebubble{
+    
+    background: hsla(44, 95%, 59%, 1);
+
+    background: linear-gradient(90deg, hsla(44, 95%, 59%, 1) 10%, hsla(3, 90%, 59%, 1) 100%);
+    
+    background: -moz-linear-gradient(90deg, hsla(44, 95%, 59%, 1) 10%, hsla(3, 90%, 59%, 1) 100%);
+    
+    background: -webkit-linear-gradient(90deg, hsla(44, 95%, 59%, 1) 10%, hsla(3, 90%, 59%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FAC332", endColorstr="#F54138", GradientType=1 );
+}

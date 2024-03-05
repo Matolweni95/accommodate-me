@@ -9,11 +9,14 @@ export const theme = {
     'white': '#fff',
     'gray': '#d9d9d9',
     'lightgray': '#f6f7f9',
+    'lightbg': '#f1f5f9',
     'blue': '#0d63c9',
     'lightblue': '#51C4FF',
     'orange': '#f05747',
     'darkblue': '#0F0C63',
-    'discovertext': '#515B6D'
+    'discovertext': '#515B6D',
+    "dark-purple": "#081A51",
+    "light-white": "rgba(255,255,255,0.17)",
   },
   fontFamily: {
     sans: ['Graphik', 'sans-serif'],
