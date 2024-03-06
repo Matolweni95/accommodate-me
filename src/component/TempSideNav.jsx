@@ -11,6 +11,7 @@ import Folder from '../assets/Folder.png';
 import Setting from '../assets/Setting.png';
 import ApplicationList from "./ApplicationList";
 import RoomCheck from "./RoomCheck";
+import UserProfile from "./UserProfile";
 
 
 const SideNav = () => {
@@ -79,7 +80,7 @@ const SideNav = () => {
         </ul>
       </div>
       <div className="h-screen flex-1">
-        <RoomCheck />
+        <UserProfile />
       </div>
     </div>
   );

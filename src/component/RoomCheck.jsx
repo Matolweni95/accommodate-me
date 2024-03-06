@@ -5,7 +5,7 @@ function RoomCheck() {
     <>
         <div className='bg-gray flex justify-center h-auto 
          items-center '>
-            <div className='flex flex-col lg:h-fit md:h-auto bg-white lg:w-2/3 md:w-3/4 p-9'>
+            <div className='flex flex-col lg:h-fit md:h-auto bg-white  p-9'>
                 <div className='titleRooms'>
                     <div className='flex justify-between'>
                         <div>
@@ -17,8 +17,8 @@ function RoomCheck() {
                             <svg xmlns="http://www.w3.org/2000/svg" width="15px" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
                         </div>
                     </div>
-                    <div className='roomBubbles flex text-white justify-around gap-3 lg:gap-7 md:gap-3 flex-wrap'>
-                        <div className='bubble single p-3 rounded flex flex-col items-center gap-3'>
+                    <div className='roomBubbles flex text-white justify-safe gap-3 lg:gap-7 md:gap-3 flex-wrap'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -28,7 +28,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble single p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -38,7 +38,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble single p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -48,7 +48,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble single p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -58,7 +58,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble single p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -68,7 +68,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble single p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -78,7 +78,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble single p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -88,7 +88,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble single p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -98,7 +98,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble single p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -108,7 +108,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble single p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -118,7 +118,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble single p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -128,7 +128,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble single p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -151,8 +151,8 @@ function RoomCheck() {
                             <svg xmlns="http://www.w3.org/2000/svg" width="15px"  viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
                         </div>
                     </div>
-                    <div className='roomBubbles flex h-full text-white flex-wrap justify-around gap-3 lg:gap-7 md:gap-3 '>
-                        <div className='bubble double p-3 rounded flex flex-col items-center gap-3'>
+                    <div className='roomBubbles flex h-full text-white flex-wrap justify-safe gap-3 lg:gap-7 md:gap-3 '>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -162,7 +162,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble double p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -172,7 +172,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble double p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -182,7 +182,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble double p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -192,7 +192,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble double p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -202,7 +202,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble double p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -214,7 +214,7 @@ function RoomCheck() {
                         </div>
                         
                        
-                        <div className='bubble double p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -224,7 +224,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble double p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -234,7 +234,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble double p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -244,7 +244,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble double p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -254,7 +254,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble double p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
@@ -264,7 +264,7 @@ function RoomCheck() {
                                 </button>
                             </div>
                         </div>
-                        <div className='bubble double p-3 rounded flex flex-col items-center gap-3'>
+                        <div className='bubble bg-dark-purple p-3 rounded flex flex-col items-center gap-3'>
                             <h1 className='text-3xl'>Room 1</h1>
                             <h3 className='text-2xl'>Occupied</h3>
                             <h4 className='opacity-60 text-center text-sm'>Masixole Matolweni</h4>
