@@ -10,12 +10,15 @@ import Chart from '../assets/Chart.png';
 import Folder from '../assets/Folder.png';
 import Setting from '../assets/Setting.png';
 import ApplicationList from "./ApplicationList";
+import { DASHBOARD_SIDE_LINKS } from "../Student/StudLib";
 import RoomCheck from "./RoomCheck";
+import { Link, Outlet } from "react-router-dom";
+import { CiLogout } from "react-icons/ci";
 
 
-const SideNav = () => {
+
+const StudentNav = () => {
     const [open, setOpen] = useState(true);
-
     const [selectedMenu, setSelectedMenu] = useState("Dashboard"); 
   
     const Menus = [
@@ -35,11 +38,11 @@ const SideNav = () => {
   
     return (
       <div className="flex h-screen items center">
-        <div
-          className={` ${
-            open ? "w-72" : "w-20 "
-          } bg-dark-purple h-screen[-10vh] p-5 m-5 rounded-[10px] pt-8 relative duration-300`}
-        >
+     <div
+      className={`fixed ${
+        open ? "w-72" : "w-20 "
+      } bg-dark-purple h-screen[-10vh] p-5 m-5 rounded-[10px] pt-8 relative duration-300`}
+    >
         <img
           src={control}
           className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple
@@ -61,28 +64,45 @@ const SideNav = () => {
             Designer
           </h1>
         </div>
-        <ul className="pt-6">
-          {Menus.map((Menu, index) => (
-            <li
-              key={index}
-              className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray text-sm items-center gap-x-4 
-              ${Menu.gap ? "mt-9" : "mt-2"} ${
-                selectedMenu === Menu.title && "bg-light-white"
+        <ul className="pt-6  flex-1 py-8 flex-col gap-0.5">
+        {DASHBOARD_SIDE_LINKS.map((item) => (
+            <div
+              key={item.key}
+              className={`flex  rounded-md p-1 cursor-pointer hover:bg-light-white text-gray text-sm items-center gap-x-4
+             
+              ${item.gap ? "mt-9" : "mt-2"} ${
+                selectedMenu === item.label && "bg-light-white"
               } `}
-              onClick={() => handleMenuClick(Menu.title)}
+              onClick={() => handleMenuClick(item.title)}
             >
-              <img src={`${Menu.src}`} />
-              <span className={`${!open && "hidden"} origin-left duration-200`}>
-                {Menu.title}
+            
+               <Link to={item.path} className="flex">
+               <span className="text-[25px] pt-[5px]">{item.icon}</span>
+               <span className={`${!open && "hidden"} origin-left duration-200 pt-[7px] pl-[6px] text-[17px]`}>
+                {item.label}
               </span>
-            </li>
+
+               </Link>
+            
+            </div>
           ))}
         </ul>
+        <div className="mt-[250px] hover:bg-light-white text-gray">
+
+        <Link to={""} className="flex">
+               <span className="text-[25px] pt-[5px]"><CiLogout /></span>
+               <span className={`${!open && "hidden"} origin-left duration-200 pt-[7px] pl-[6px] text-[17px]`}>
+                Signout
+              </span>
+
+               </Link>
+       </div>
       </div>
-      <div className="h-screen flex-1">
-        <RoomCheck />
-      </div>
+      {/* <div className=" flex-1 overflow-y-auto bg-white m-[10px] md:mt-[20px]">
+
+    {<Outlet/>}
+      </div> */}
     </div>
   );
 };
-export default SideNav;
+export default StudentNav;
