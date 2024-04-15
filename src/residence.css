@@ -1,0 +1,8 @@
+.banner {
+    background-image: url(../src/assets/banner.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 512px;
+    border-radius: 9px;
+}

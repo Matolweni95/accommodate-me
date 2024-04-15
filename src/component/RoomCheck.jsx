@@ -1,11 +1,13 @@
 import React from 'react'
+import SideNav from './TempSideNav'
 
 function RoomCheck() {
   return (
     <>
-        <div className='bg-gray flex justify-center h-auto 
-         items-center '>
-            <div className='flex flex-col lg:h-fit md:h-auto bg-white  p-9'>
+    <SideNav>
+        <div className='bg-gray flex justify-center 
+         items-center ' style={{ height: 'calc(100% - 9rem)' }}>
+            <div className='flex flex-col lg:h-fit md:h-auto bg-white  p-9'  >
                 <div className='titleRooms'>
                     <div className='flex justify-between'>
                         <div>
@@ -278,6 +280,7 @@ function RoomCheck() {
                 </div>
             </div>
         </div>
+    </SideNav>
     </>
   )
 }

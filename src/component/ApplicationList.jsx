@@ -2,11 +2,13 @@ import React from 'react';
 import hero from '../assets/hero2.jpeg'
 import ActivityComponent from './ActivityComponent';
 import SideProfile from './SideProfile';
+import SideNav from './TempSideNav';
 
 function ApplicationList() {
   return (
     <>
-        <div className='  flex flex-col gap-6'>
+      <SideNav>
+      <div className='  flex flex-col gap-6'>
             <div className='flex w-full  gap-8 items-center'>
               <div className='flex w-full mr-11 h-[100vh] relative items-center'>
                 <div className='flex w-full'>
@@ -46,17 +48,18 @@ function ApplicationList() {
                     </div>
                   </div>
                   </div>
-                  <div className='flex flex-col gap-7 justify-around'>
+                  {/* <div className='flex flex-col gap-7 justify-around'>
                     <div className=''>
                         <SideProfile />
                     </div>
                     <div className=''>
                           <ActivityComponent />
                     </div>
-                  </div>
+                  </div> */}
               </div>
               </div>
         </div>
+      </SideNav>
     </>
   )
 }

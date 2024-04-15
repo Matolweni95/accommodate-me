@@ -1,11 +1,13 @@
 import React from 'react';
 import hero from '../assets/hero2.jpeg'
+import SideNav from './TempSideNav';
 
 function TenantList() {
   return (
     <>
-        <div className='tenantList h-fit md:h-screen flex items-center justify-center bg-gray p-5'>
-            <div className='bg-white rounded-[10px] p-12 md:w-full lg:w-1/2 flex flex-col gap-6 pt-10'>
+      <SideNav>
+      <div className='tenantList h-fit md:h-screen flex items-center justify-center bg-gray p-5'>
+            <div className='bg-white rounded-[10px] p-12 md:w-full flex flex-col gap-6 pt-10'>
               <div className='flex flex-col md:flex-row justify-between border-b-[1px] gap-6 border-gray pb-7 md:items-center'>
               <h1 className='lg:text-3xl text-left'>Tenant List</h1>
               <div className='flex gap-4 items-center rounded'>
@@ -42,8 +44,9 @@ function TenantList() {
                 </div>
             </div>
         </div>
+      </SideNav>
     </>
   )
 }
 
-export default TenantList
+export default TenantList 
