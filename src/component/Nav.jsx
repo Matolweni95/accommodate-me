@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Nav() {
   const [isMenuHidden, setMenuHidden] = useState(true);
@@ -76,9 +77,11 @@ function Nav() {
             </ul>
             
             </div>
-            <button className={`md:flex md:w-auto ${isMenuHidden ? 'hidden' : ''}`} id="menu">
-                Sign Up
+            <Link to='/login'>
+            <button className={`md:flex text-base text-white py-2 px-4 rounded-lg bg-blue md:w-auto ${isMenuHidden ? 'hidden' : ''}`} id="menu">
+                Login
             </button>
+            </Link>
           </nav>
         </header>
       </div>

@@ -6,7 +6,7 @@ function RoomCheck() {
     <>
     <SideNav>
         <div className='bg-gray flex justify-center 
-         items-center ' style={{ height: 'calc(100% - 9rem)' }}>
+         items-center ' >
             <div className='flex flex-col lg:h-fit md:h-auto bg-white  p-9'  >
                 <div className='titleRooms'>
                     <div className='flex justify-between'>

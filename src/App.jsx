@@ -1,4 +1,5 @@
 import React from 'react'
+import { Router,Route, Routes, BrowserRouter} from 'react-router-dom'
 import CompanyDashboard from './component/CompanyDashboard'
 import ApplicationList from './component/ApplicationList'
 import ApplicationView from './component/ApplicationView'
@@ -24,7 +25,19 @@ function App() {
   const userRole = initialContextData.role;
 
   return (
-    <ResidenceApplication />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<CompanyDashboard />} />
+        <Route path="/applications" element={<ApplicationList />} />
+        {/* <Route path="/profile" element={<CompanyProfile />} /> */}
+        <Route path="/rooms" element={<RoomCheck />} />
+        <Route path="/search" element={<SearchPortal />} />
+        <Route path="/tenant" element={<TenantList />} />
+        <Route path="/view" element={<ApplicationView />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

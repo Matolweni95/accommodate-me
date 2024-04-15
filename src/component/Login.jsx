@@ -4,6 +4,7 @@ import { encryptData } from "./CyptoUtils";
 import { jwtDecode } from "jwt-decode";
 import { MyContext } from "../App";
 import { useContext } from "react";
+import { Link } from 'react-router-dom';
 
 function Login() {
   const [isLogin, setIsLogin] = useState(true);
@@ -140,9 +141,11 @@ function Login() {
                 </div>
               </div>
               <div className='w-full mt-3'>
+                <Link to="/dashboard">
                 <button className={`bg-${isLogin ? 'blue' : 'orange'} text-white w-full p-3 rounded-[10px]`}>
                   {isLogin ? 'Sign In' : 'Register'}
                 </button>
+                </Link>
               </div>
               {isLogin && (
                 <div>

@@ -13,6 +13,7 @@ import ApplicationList from "./ApplicationList";
 import RoomCheck from "./RoomCheck";
 import UserProfile from "./UserProfile";
 import TenantList from "./TenantList";
+import { Link } from "react-router-dom";
 
 const SideNav = ({ children }) => {
     const [open, setOpen] = useState(true);
@@ -32,12 +33,12 @@ const SideNav = ({ children }) => {
     
     const Menus = [
         { title: "Dashboard", src: Chart_fill },
-        { title: "Inbox", src: Chat },
-        { title: "Accounts", src: User, gap: true },
+        { title: "Applications", src: Chat },
+        { title: "Profile", src: User, gap: true },
         { title: "Schedule ", src: Calendar },
         { title: "Search", src: Search },
-        { title: "Analytics", src: Chart },
-        { title: "Files ", src: Folder, gap: true },
+        { title: "Tenant", src: Chart },
+        { title: "Rooms ", src: Folder, gap: true },
         { title: "Setting", src: Setting },
     ];
 
@@ -57,27 +58,24 @@ const SideNav = ({ children }) => {
         <div className="flex flex-col lg:flex-row h-screen items center">
             
             <div 
-                className={` ${
-                    open ? "w-72" : "w-20 "
-                    } lg:block sm:hidden hidden bg-dark-purple h-screen[-10vh] p-5 m-5 rounded-[10px] pt-8 relative duration-300`}
-            >
+                className={` ${ open ? "w-72" : "w-20 "} lg:block sm:hidden hidden bg-dark-purple h-screen[-10vh] p-5 m-5 rounded-[10px] pt-8 relative duration-300`}>
                 <img
                     src={control}
                     className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple
-           border-2 rounded-full  ${!open && "rotate-180"}`}
+                    border-2 rounded-full  ${!open && "rotate-180"}`}
                     onClick={toggleSideNav}
                 />
                 <div className="flex gap-x-4 items-center">
                     <img
                         src={logo}
                         className={`cursor-pointer duration-500 ${
-                            open && "rotate-[360deg]"
-                            }`}
+                        open && "rotate-[360deg]"
+                        }`}
                     />
                     <h1
                         className={`text-white origin-left font-medium text-xl duration-200 ${
-                            !open && "scale-0"
-                            }`}
+                        !open && "scale-0"
+                        }`}
                     >
                         Designer
                     </h1>
@@ -87,15 +85,17 @@ const SideNav = ({ children }) => {
                         <li
                             key={index}
                             className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray text-sm items-center gap-x-4 
-              ${Menu.gap ? "mt-9" : "mt-2"} ${
-                                selectedMenu === Menu.title && "bg-light-white"
-                                } `}
+                            ${Menu.gap ? "mt-9" : "mt-2"} ${
+                            selectedMenu === Menu.title && "bg-light-white"
+                            } `}
                             onClick={() => handleMenuClick(Menu.title)}
                         >
+                            <Link to={`/${Menu.title.toLowerCase()}`} className="flex items-center">
                             <img src={`${Menu.src}`} />
                             <span className={`${!open && "hidden"} origin-left duration-200`}>
                                 {Menu.title}
                             </span>
+                            </Link>
                         </li>
                     ))}
                 </ul>
