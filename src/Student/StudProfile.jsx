@@ -1,14 +1,51 @@
 import pic from "../Image/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
+import { MdAddPhotoAlternate } from "react-icons/md";
+import '../css/profile.css'
+import { useState } from "react";
 
 const StudProfile = () =>{
 
+  const [image,setImage] =useState(pic)
+  const [picture,setPicture] =useState(null)
+
+const selectPicture = () =>{
+
+  document.getElementById('selectFile').click()
+}
+
+const handleFileChange = (e) => {
+  const picture = e.target.files[0];
+  if (picture) {
+    setPicture(picture)
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const dataUrl = e.target.result;
+      setImage(dataUrl);
+    };
+    reader.readAsDataURL(picture);
+  }
+
+};
+
+const cancelResidence = ()=>{
+
+
+}
+
 return(
-<div className="bg-sky rounded-md">
-<h1 className="pt-[20px] pl-[80px] font-bold">Profile Details</h1>
-<div className="flex ">
-<div className="m-[30px] bg-white ml-[80px] rounded-md">
-    <div>
-    <img src={pic} className="w-[270px] h-[220px] m-[12px] rounded-md "/>
+<div className="bg-lightblue rounded-md h-full ">
+  
+<h1 className="pt-[30px] pl-[80px] text-[18px] font-bold">Profile Details</h1>
+<div className="flex  flex-col md:flex-row">
+<div className="m-[30px] bg-white ml-[20px] rounded-md ">
+    <div className="" >
+      <div className="container w-[270px]  md:w-[355px]">
+    <img src={image} className="h-[245px] m-[5px] rounded-md image"/>
+    <div class="middle">
+    <div class="text-[45px]" onClick={selectPicture} ><MdAddPhotoAlternate /></div>
+    <input type="file" className="hidden" id='selectFile' onChange={handleFileChange}/>
+  </div>
+  </div>
     <p className="pt-[5px] pr-[12px] float-end text-gray">Last updated 10:30 Tuesday</p>
   
     </div>
@@ -16,22 +53,21 @@ return(
       
     <span className="uderline w-[100px] h-[2px] text-dark-purple"></span>
     <h1 className="pb-[5px] font-bold"> Personal Details</h1>
-<h1>Cynthia Dladla</h1>
-  <p>cynthia@gmail.com</p>  
-  <p>0729595846</p>
-  <p>Female </p>
+<h1 className="font-bold pt-[5px]">Cynthia Dladla</h1>
+<p className="pt-[10px]">Female </p>
+  <input value={"cynthiadladla@gmail.com"} className="w-full pt-[10px] outline-0"></input> <br/>
+  <input value={"0729595846"} className="w-full pt-[10px] outline-0"></input>
+ 
 
-  <h2 className="pt-[10px] pb-[5px] text-bold font-bold">Next of kin</h2>
-  <p>Andries Dladla</p>
-  <p>0712345678</p>
+  
 </div>
- <button className="bg-sky ml-[100px] mt-[17px] mb-[10px] w-[100px] h-[30px] rounded-md">Update</button>
+ <button className="bg-sky hover:text-white font-bold ml-[100px] mt-[25px] mb-[10px] w-[100px] h-[30px] rounded-md">Update</button>
 </div>
 
 
-<div>
+<div >
 
-<div className="bg-white w-[600px] mt-[30px] rounded-md">
+<div className="bg-white w-[580px] mt-[30px] rounded-md w-1/2 mr-[10px]">
 <h1 className="pt-[15px] pl-[10px] pb-[5px] font-bold">House Details</h1>
 <div className="bg-sky h-[1px]"  style={{width:"100%"}}></div>
 <p className="p-[10px]">Room no: 23</p>
@@ -39,9 +75,9 @@ return(
 <p className="pb-[10px] pl-[10px]">Date moved in: 23 January 2023</p>
 <p className="pb-[10px] pl-[10px]">Duration: Year</p>
 
-<button className='bg-transparent border border-lightblue py-1 px-2 rounded text-lightblue w-[300px] mt-[20px] mb-[20px] ml-[100px]'>Cancel Residence</button>
+<button className='bg-transparent hover:bg-lightblue font-bold hover:text-white border border-lightblue py-1 px-2 rounded text-lightblue w-[300px] mt-[20px] mb-[20px] ml-[100px]' onClick={()=>{cancelResidence}}>Cancel Residence</button>
 </div>
-<div className="bg-white w-[600px] h-[270px] mt-[30px] rounded-md">
+<div className="bg-white w-[580px] h-[250px] mt-[30px] rounded-md w-1/2 mr-[10px] ">
 <h1 className="pt-[15px] pl-[10px] pb-[5px] font-bold">Funding</h1>
 <div className="bg-sky h-[1px]"  style={{width:"100%"}}></div>
 <p className="p-[10px]">Funded by : NSFAS</p>

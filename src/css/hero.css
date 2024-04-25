@@ -1,0 +1,13 @@
+
+.hero{
+    background-image: url('../Image/photo-1512917774080-9991f1c4c750.avif');
+    background-color: rgba(255, 255, 255, 0.5);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center center;
+
+}
+.hero img{
+    opacity: 0.2;
+}

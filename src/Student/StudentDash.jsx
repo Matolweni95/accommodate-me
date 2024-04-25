@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import ActivityComponent from "../component/ActivityComponent";
-import SideProfile from "../component/SideProfile";
-import pic from "../assets/hero2.jpeg"
-import pieChart from "../Image/pie-chart-example.png"
-import graph from "../Image/blue-bar-graph-free-vector.jpg"
-import line from "../Image/maxresdefault.jpg"
-import add from "../Image/types of charts_32023-May-22-2023-10-17-26-0670-PM.webp"
+// import ActivityComponent from "../component/ActivityComponent";
+// import SideProfile from "../component/SideProfile";
+// import pic from "../assets/hero2.jpeg"
+// import pieChart from "../Image/pie-chart-example.png"
+// import graph from "../Image/blue-bar-graph-free-vector.jpg"
+// import line from "../Image/maxresdefault.jpg"
+// import add from "../Image/types of charts_32023-May-22-2023-10-17-26-0670-PM.webp"
 import { FaUniversity } from "react-icons/fa";
 import { SiGofundme } from "react-icons/si";
 import { FaHouseCircleCheck } from "react-icons/fa6";

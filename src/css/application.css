@@ -13,15 +13,16 @@
 
 body {
     font-family: montserrat, arial, verdana;
-
+   
 }
 
 
 #msform {
+    top: 0;
     text-align: center;
     position: fixed;
     z-index: 9999999;
-    background-color: #ee0979;
+    
     height: 110px;
 
 }

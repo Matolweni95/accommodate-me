@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+
 const dataArray = Array.from({ length: 20 }, (_, index) => ({ id: index + 1, content: `Item ${index + 1}` }));
 
 
@@ -17,7 +18,7 @@ const Issues = () => {
         {subject: "Broken window", name: "Cynthia Dladla", date: "01 January 2024", issue:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " },
         {subject: "Broken window", name: "Cynthia Dladla", date: "01 January 2024", issue:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " },
         {subject: "Broken window", name: "Cynthia Dladla", date: "01 January 2024", issue:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " },
-        {subject: "Broken window", name: "Cynthia Dladla", date: "01 January 2024", issue:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " },
+       // {subject: "Broken window", name: "Cynthia Dladla", date: "01 January 2024", issue:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " },
     ]);
     const [showEditForm, setShowEditForm] = useState(false);
     const [editedItem, setEditedItem] = useState(null);
@@ -81,20 +82,23 @@ const Issues = () => {
     return (
         <div>
         <div>
-           <Link to={'res'}> <button className="bg-transparent border border-lightblue py-1 px-2 rounded w-[200px] m-[20px] ">Add</button>
+           <Link to={'report'}> <button className="bg-transparent border border-lightblue py-1 px-2 rounded w-[200px] m-[20px] ">Add</button>
             </Link>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-4 ">
+            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-10 p-4 h-auto">
         {currentPageData.map((item, i) => (
           <div key={i} className="bg-white border-2 border-lightgray  rounded-md h-[270px]">
-            <h1 className="m-[10px]">{item.subject}</h1>
+            <h1 className="m-[10px] font-bold text-darkblue">{item.subject}</h1>
             <h1 className="ml-[10px] pb-[10px]">{item.name}</h1>
+            <div className="flex " >
             <p className="ml-[10px] pb-[10px]">{item.date}</p>
+            <p className="flex ml-[55px] text-lightgreen text-[15px]">• Submitted</p>
+            </div>
             <p className="ml-[10px] pb-[20px]">{renderContent(item.issue)}</p>
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-2 ">
-            <button onClick={() => handleEditClick(item)} className="bg-lightblue w-[150px] m-[10px]">
+            <button onClick={() => handleEditClick(item)} className="bg-darkblue w-[140px] m-[10px] rounded-md text-white">
               Edit
             </button>
-            <button onClick={() => handleMoreClick(item)} className="bg-red w-[150px] m-[10px] float-end">
+            <button onClick={() => handleMoreClick(item)} className="bg-lightblue w-[140px] m-[10px] float-end rounded-md text-white">
               More
             </button>
             </div>
@@ -107,7 +111,7 @@ const Issues = () => {
       {selectedItem && (
         <div className="modal-overlay ">
           <div className="modal flex-col w-[300px] md:w-[500px] h-auto">
-          
+          <button className="flex flex-row float-end bg-red w-[200px]">Solved</button>
             <p className="pt-[7px]">{selectedItem.name}</p>
             <p className="pt-[7px]">{selectedItem.date}</p>
             <h1 className="font-bold pt-[7px]">{selectedItem.subject}</h1>
@@ -118,15 +122,16 @@ const Issues = () => {
       )}
 
 { issue.length >6? 
-    <div className="flex justify-center items-center w-screen fixed bg-gray">
-    <button onClick={handlePrevPage} className="bg-darkblue text-white px-4 py-2 mr-2">
-      Previous Page
+    <div className="flex w-full m-[20px]  ">
+    <button onClick={handlePrevPage} className="bg-darkblue text-white px-4 py-2  ml-[80px]  md:ml-[430px] rounded-md">
+      Back
     </button>
-    <button onClick={handleNextPage} className="bg-darkblue text-white px-4 py-2">
-      Next Page
+    <p className="p-[10px]">{currentPage}</p>
+    <button onClick={handleNextPage} className="bg-darkblue text-white px-4 py-2  rounded-md">
+      Next
     </button>
   </div>:
-  <div>kll</div>
+  <div></div>
   }
     </div>
  
