@@ -9,47 +9,18 @@ import { useEffect, useState } from "react";
 import { FaUniversity } from "react-icons/fa";
 import { SiGofundme } from "react-icons/si";
 import { FaHouseCircleCheck } from "react-icons/fa6";
-import axios from "axios";
 
-const StudentDash = () =>{
+const AdminDash = () =>{
    
-  const [summary, setSummary] = useState({})
+  const [summary, setSummary] = useState()
 
   
-  const [profile, setProfile] = useState([])
-
   useEffect(()=>{
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`http://localhost:8080/auth/getApplications/2`)
-  
-        if (!response) {
-          throw new Error('No response received from the server');
-        }
-  
-      
-        const data = response.data;
-        setProfile(data);
-        
 
-        const profile1 = data.find(item => item.studentStatus === 'Approved');
-        
-  
-        if (profile1) {
-          setSummary(profile1);
-         console.log(profile1)
-        }
-  
-  
-        console.log('Data fetched:', data);
-      } catch (error) {
-        console.error('Error fetching data:', error.message);
-      }
-    };
-  
-    fetchData();
 
-  },[])
+
+
+  },[]);
 
     return(
         <div>
@@ -59,7 +30,7 @@ const StudentDash = () =>{
              
                <h1 className="text-[30px] "><FaUniversity/></h1>
                <p className="bold font-bold pt-[5px] position-relative">University</p>
-               <p> {summary.institution}</p>
+               <p>University of Witwatersrand</p>
                
               
                 </div>
@@ -80,10 +51,10 @@ const StudentDash = () =>{
             <div className="bg-cover bg-center bg-white h-[190px] w-200 m-[11px] rounded-[10px]" >
 
             <h1 className="p-2 font-bold"> Personal Details</h1>
-              <h1 className="p-[6px]">{summary.firstName +" "+ summary.lastName}</h1>
-               <p className="pb-[6px] pl-[6px]">{summary.email}</p>  
-               <p className="pb-[6px] pl-[6px]">{summary.contactDetails}</p>
-               <p className="pb-[6px] pl-[6px]">{summary.gender} </p>
+              <h1 className="p-[6px]">Cynthia Dladla</h1>
+               <p className="pb-[6px] pl-[6px]">cynthia@gmail.com</p>  
+               <p className="pb-[6px] pl-[6px]">0729595846</p>
+               <p className="pb-[6px] pl-[6px]">Female </p>
             </div>
             <div className="bg-cover bg-center bg-white h-[190px] w-200 m-[11px] rounded-[10px]" >
               <h1 className="p-2 font-bold">Room</h1>
@@ -92,22 +63,21 @@ const StudentDash = () =>{
             <p className="pb-[6px] pl-[6px]">Date moved in: 23 January 2023</p>
             <p className="pb-[6px] pl-[6px]">Duration: Year</p>
             </div>
-            <div className="bg-cover bg-center bg-white h-[220px] w-200 m-[11px] rounded-[10px]" >
+            <div className="bg-cover bg-center bg-white h-[190px] w-200 m-[11px] rounded-[10px]" >
           
-            <h1 className="p-2 font-bold">Kin Details</h1>
-
-            <p className="p-[6px]">Full Name : {summary.guardianFullName+" "+ summary.guardianSurname}</p>
-            <p className="pb-[6px] pl-[6px]">Relationship : {summary.relationship}</p>
-            <p className="pb-[6px] pl-[6px]">Email : {summary.guardianEmail}</p>
-            <p className="pb-[6px] pl-[6px]">Contact : {summary.guardianContacts}</p>
-            <p className="pb-[6px] pl-[6px]">Address : {summary.address}</p>
-            </div>
-            <div className="bg-cover bg-center bg-white h-[220px] w-200 m-[11px] rounded-[10px]" >
             <h1 className="p-2 font-bold">Funding</h1>
 
             <p className="p-[6px]">Funded by : NSFAS</p>
-            <p className="pb-[6px] pl-[6px]">Institution :  {summary.institution}</p>
-            <p className="pb-[6px] pl-[6px]">Year of study : {summary.yearOfStudy}</p>
+            <p className="pb-[6px] pl-[6px]">Institution : Wits University</p>
+            <p className="pb-[6px] pl-[6px]">Year of study : 2nd year</p>
+            <p className="pb-[6px] pl-[6px]">Faculty: ICT</p>
+            </div>
+            <div className="bg-cover bg-center bg-white h-[190px] w-200 m-[11px] rounded-[10px]" >
+            <h1 className="p-2 font-bold">Funding</h1>
+
+            <p className="p-[6px]">Funded by : NSFAS</p>
+            <p className="pb-[6px] pl-[6px]">Institution : Wits University</p>
+            <p className="pb-[6px] pl-[6px]">Year of study : 2nd year</p>
             <p className="pb-[6px] pl-[6px]">Faculty: ICT</p>
               </div> 
             </div>
@@ -118,4 +88,4 @@ const StudentDash = () =>{
         </div>
     )
 }
-export default StudentDash;
+export default AdminDash;

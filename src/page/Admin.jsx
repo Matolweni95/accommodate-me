@@ -3,19 +3,20 @@ import control from '../assets/control.png';
 import logo from '../assets/logo.png';
 import pic from "../Image/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
 import { BiSolidLogInCircle } from "react-icons/bi";
-import { DASHBOARD_SIDE_LINKS } from "../Student/StudLib";
+import { ADMIN_SIDE_LINKS } from "../Student/StudLib";
 import { Link, Outlet } from "react-router-dom";
 import { CiLogout } from "react-icons/ci";
 import Chart_fill from '../assets/Chart_fill.png';
 
 
 
-const StudentPortal = () => {
+const AdminPortal = () => {
     const [open, setOpen] = useState(true);
     const [selectedMenu, setSelectedMenu] = useState("Dashboard"); 
     const icons = [{icon:Chart_fill},{icon:Chart_fill},{icon:Chart_fill},{icon:Chart_fill},{icon:Chart_fill}
     ]
 
+    
   
     const handleMenuClick = (title) => {
       setSelectedMenu(title);
@@ -50,7 +51,7 @@ const StudentPortal = () => {
           </h1>
         </div>
         <ul className="pt-6  flex-1 py-8 flex-col gap-0.5">
-        {DASHBOARD_SIDE_LINKS.map((item) => (
+        {ADMIN_SIDE_LINKS.map((item) => (
 
           <div key={item.key}>
              <Link to={item.path} className="flex pt-[4px]">
@@ -98,7 +99,7 @@ const StudentPortal = () => {
         </div>
         <div className="ml-[15px] flex flex-row justify-center items-center">
       <ul className="  flex-1 py-4 flex  ">
-        {DASHBOARD_SIDE_LINKS.map((item) => (
+        {ADMIN_SIDE_LINKS.map((item) => (
           <div key={item.key}>
             <Link to={item.path} className="flex w-full">
             <div
@@ -135,49 +136,4 @@ const StudentPortal = () => {
     </div>
   );
 };
-export default StudentPortal;
-
-
-
-
-// import React from "react";
-// import DashNav from "../Student/DashNav";
-// import SideNav from "../component/TempSideNav";
-// import { DASHBOARD_SIDE_LINKS } from "../Student/StudLib";
-// import StudentNav from "../component/StudentNav";
-// import pic from "../assets/hero2.jpeg"
-// import { Link, Outlet } from "react-router-dom";
-// import { RiLogoutBoxRFill } from "react-icons/ri";
-
-// const StudentPortal =()=>{
-
-// return(
-// <div className="flex flex-row bg-neutral-100 h-screen w-screen overflow-hidden bg-Slate">
-//     <div className="hidden md:block">
-// <StudentNav />
-// </div>
-// <div className="h-screen w-screen">
-//     <div className="bg-teal-200 flex m-[10px] bg-dark-purple h-[50px] rounded-md md:hidden">
-//     <img src={pic} className="h-[40px] w-[40px] m-[5px] rounded-md"/>
-//         <div className="flex text-gray ml-[20px]" style={{width:"90%"}}>
-      
-//         {DASHBOARD_SIDE_LINKS.map((items)=>(
-//        <Link to={items.path} className="m-[10px] pt-2 text-[17px]">{items.icon}</Link>
-   
-//         ))
-//         }
-//         </div>
-//         <div className="flex text-gray float-end">
-          
-//             <Link to={""} className=" m-[15px] text-[17px]"><RiLogoutBoxRFill /></Link>
-//     </div>
-//     </div>
-//     <div  className="flex-1 overflow-y-auto bg-white m-[10px] md:mt-[20px]">
-//         {<Outlet />}
-//         </div>
-// </div>
-// </div>
-// )
-
-// }
-// export default StudentPortal;
+export default AdminPortal;

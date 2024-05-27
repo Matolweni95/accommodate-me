@@ -12,7 +12,7 @@ import Chat from '../assets/Chat.png';
 export const DASHBOARD_SIDE_LINKS =[{
 key:'Dashboard',
 label:'Dashboard',
-path:'/',
+path:'/admin',
 icon:Chart_fill
 },
 {
@@ -40,35 +40,3 @@ icon:Chart_fill
                 icon:Chat
                 }
 ]
-
-export const ADMIN_SIDE_LINKS =[{
-    key:'Dashboard',
-    label:'Dashboard',
-    path:'/',
-    icon:Chart_fill
-    },
-    {
-        key:'Profile',
-        label:'Profile',
-        path:'/profile',
-        icon:User
-        },
-        {
-            key:'Application',
-            label:'Applications',
-            path:'/applications',
-            icon:Folder
-            },
-            {
-                key:'Issues',
-                label:'Issues',
-                path:'/issues',
-                icon:Setting
-                },
-                {
-                    key:'Announcement',
-                    label:'Announcement',
-                    path:'/announcement',
-                    icon:Chat
-                    }
-    ]
