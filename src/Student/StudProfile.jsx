@@ -1,12 +1,37 @@
 import pic from "../Image/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
 import { MdAddPhotoAlternate } from "react-icons/md";
 import '../css/profile.css'
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const StudProfile = () =>{
 
   const [image,setImage] =useState(pic)
   const [picture,setPicture] =useState(null)
+  const [profiles, setProfiles] = useState([])
+  const [profile, setProfile] = useState({})
+
+  useEffect(()=>{
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:8080/auth/getProfile/2`)
+  
+        if (!response) {
+          throw new Error('No response received from the server');
+        }
+  
+        const data = response.data;
+        setProfile(data);
+      
+        console.log('Data fetched:', data);
+      } catch (error) {
+        console.error('Error fetching data:', error.message);
+      }
+    };
+  
+    fetchData();
+
+  },[])
 
 const selectPicture = () =>{
 
@@ -35,7 +60,7 @@ const cancelResidence = ()=>{
 return(
 <div className="bg-lightblue rounded-md h-full ">
   
-<h1 className="pt-[30px] pl-[80px] text-[18px] font-bold">Profile Details</h1>
+<h1 className="pt-[30px] pl-[30px] md:pl-[80px] text-[18px] font-bold">Profile Details</h1>
 <div className="flex  flex-col md:flex-row">
 <div className="m-[30px] bg-white ml-[20px] rounded-md ">
     <div className="" >
@@ -53,10 +78,10 @@ return(
       
     <span className="uderline w-[100px] h-[2px] text-dark-purple"></span>
     <h1 className="pb-[5px] font-bold"> Personal Details</h1>
-<h1 className="font-bold pt-[5px]">Cynthia Dladla</h1>
-<p className="pt-[10px]">Female </p>
-  <input value={"cynthiadladla@gmail.com"} className="w-full pt-[10px] outline-0"></input> <br/>
-  <input value={"0729595846"} className="w-full pt-[10px] outline-0"></input>
+<h1 className="font-bold pt-[5px]">{profile.firstName +" " + profile.lastName}</h1>
+<p className="pt-[10px]">{profile.gender} </p>
+  <input value={profile.email} className="w-full pt-[10px] outline-0"></input> <br/>
+  <input value={profile.contactDetails} className="w-full pt-[10px] outline-0"></input>
  
 
   
@@ -65,7 +90,7 @@ return(
 </div>
 
 
-<div >
+<div className="hidden md:block lg:block" >
 
 <div className="bg-white w-[580px] mt-[30px] rounded-md w-1/2 mr-[10px]">
 <h1 className="pt-[15px] pl-[10px] pb-[5px] font-bold">House Details</h1>
@@ -81,8 +106,8 @@ return(
 <h1 className="pt-[15px] pl-[10px] pb-[5px] font-bold">Funding</h1>
 <div className="bg-sky h-[1px]"  style={{width:"100%"}}></div>
 <p className="p-[10px]">Funded by : NSFAS</p>
-<p className="pb-[10px] pl-[10px]">Institution : Wits University</p>
-<p className="pb-[10px] pl-[10px]">Year of study : 2nd year</p>
+<p className="pb-[10px] pl-[10px]">Institution : {profile.institution}</p>
+<p className="pb-[10px] pl-[10px]">Year of study : {profile.yearOfStudy}</p>
 <p className="pb-[10px] pl-[10px]">Faculty: ICT</p>
 
 </div>

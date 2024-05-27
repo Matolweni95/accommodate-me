@@ -87,14 +87,14 @@ const Announcement = () => {
         <div>
         <div>
            <div className="flex flex-col justify-center items-center w-full">
-            <h1 className="font-bold p-5 text-[30px]">Latest News</h1>
+            <h1 className="font-bold p-5 text-[25px] md:text-[30px]">Latest News</h1>
            </div>
             <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-10 p-4 h-auto">
         {currentPageData.map((item, i) => (
           <div key={i} className="bg-white border-2 border-lightgray rounded-md h-auto announcement">
 
             {/* <img src={news} style={{}} className="rounded-md"/> */}
-            <h1 className="m-[10px]  text-dark-purple text-[30px]">{item.subject}</h1>
+            <h1 className="m-[10px]  text-dark-purple text-[25px] md:text-[30px]">{item.subject}</h1>
            
               <p className="ml-[10px] pb-[20px] flex flex-row"><span className="text-[15px] pt-[3px] pr-[3px]"><FaRegCalendarAlt /> </span>{item.date}</p>
             <p className="ml-[10px] pb-[20px]">{renderContent(item.issue)}</p>

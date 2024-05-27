@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2'
 
+const id = 1;
+import storage from '../config/Firebase-config';
 import { getStorage, ref, getDownloadURL, uploadBytes,uploadBytesResumable } from "firebase/storage";
 
 const Application =()=>{
@@ -62,14 +64,17 @@ const Application =()=>{
     };
     const handlekinIdChange = (e) => {
       const selectedFile = e.target.files[0];
-      setKinId(selectedFile);
+      setKinId(selectedFile);3
     };
 
     const handleUpload = async () => {
-      if (idImage && certificateImage && capVal) {
-        const storage = getStorage();
+       
+       
+
+      if (idDocument && transcript && funding) {
+       
     
-      
+       
         const idStorageRef = ref(storage, `studentApplications/${idDocument.name}`);
         const idUploadTask = uploadBytesResumable(idStorageRef, idDocument);
     
@@ -99,19 +104,14 @@ const Application =()=>{
           })
           .then(([idDownloadURL, kinIdDownloadURL, fundingDownloadURL,transcriptDownloadURL,registrationDownloadURL]) => {
             
-            axios.post("http://localhost:8080/api/v1/application/saveApplication", {
-             firstname:apply.firstname, lastname:apply.lastname, idNumber:apply.idNumber, dob:apply.dob, 
-             gender:apply.gender, email:apply.email, cellNo:apply.cellNo, address:apply.address, kinName:apply.kinName, 
-             kinSurname:apply.kinSurname, relationship:apply.relationship, kinEmail:apply.kinEmail, kinNumber:apply.kinNumber,
-             school:apply.school, currentGrade:apply.currentGrade, applyGrade:apply.applyGrade, idDocument:idDownloadURL,
-             results:certificateDownloadURL, status:"Submitted"
-              
-            },
-           
-            
-            
-            
-            ).then(() => {
+            axios.post(`http://localhost:8080/auth/createApplication/2`, {
+             firstName:apply.firstname, lastName:apply.lastname, idNumber:apply.idNumber, dateOfBirth:apply.dob, 
+             gender:apply.gender, email:apply.email, contactDetails:apply.cellNo, address:apply.homeAddress, guardianFullName:apply.kinName, 
+             guardianSurname:apply.kinSurname, relationship:apply.kinRelationship, guardianEmail:apply.kinEmail, guardianContacts:apply.kinNumber,
+             institution:apply.institution, campus:apply.campus, bursary:apply.funding, yearOfStudy:apply.studyYear, 
+             iDocument:idDownloadURL,guardianIdocument:kinIdDownloadURL, proofOfReg:registrationDownloadURL, transcript:transcriptDownloadURL, fundDocument:fundingDownloadURL ,status:"Submitted"
+         
+            }).then(() => {
               Swal.fire({
                 icon: 'success',
                 title: 'Success!',
@@ -131,6 +131,7 @@ const Application =()=>{
           title: 'Error!',
           text: 'Failed to upload application.',
         });
+        console.log("failed")
       }
     };
 
@@ -150,7 +151,7 @@ return(
                 <li  className={step >= 4 ? 'active' : ''}>Review</li>
             </ul>
         </div>
-        <form id="msform1" >
+        <div id="msform1" >
            
           
             <div className="fieldset-container  ml-[20px] mr-[20px] mt-[150px] md:m-[100px] md:mt-[200px]">
@@ -566,16 +567,17 @@ return(
               <input
                 type="submit"
                 name="submit"
+                onClick={handleUpload}
                 className="submit action-button"
                 value="Submit"
-                onClick={()=>{handleUpload}}
               />
+        
               </div>
             </div>
           </div>
         
-        </form>
-       
+        </div>
+     
     </div>
     
 </div>
