@@ -3,11 +3,11 @@ import React from 'react'
 function Discover() {
   return (
     <div className='bg-lightgray relative h-[1240px] lg:h-[78vh] 2xl:h-[60vh] md:h-[490px]'>
-        <h1 className='text-center lg:text-4xl mb-11 lg:mb-0 lg:pt-[70px]'>Discover all things property</h1>
-        <div className='pt-12 pl-4 pb-4 pr-4 lg:justify-center lg:items:center lg:flex'>
+        <h1 className='text-center lg:text-3xl lg:mb-0 lg:pt-[70px]'>Discover all things property</h1>
+        <div className='pt-12 pl-4 pr-4 lg:justify-center lg:items:center lg:flex'>
             
-            <div className='cards m-7 rounded-[24px] flex flex-col md:flex-row gap-4 bg-white pb-12 relative relative lg:top-[-1vh] 2xl:top-[4vh] lg:h-[450px] 2xl:w-3/4 lg:w-3/4 '>
-                <div className='card flex flex-col justify-between  items-center'>
+            <div className='cards m-7 p-5 rounded-[24px] flex flex-col md:flex-row gap-4 bg-white relative relative lg:top-[-1vh] 2xl:top-[4vh] lg:h-[450px] 2xl:w-3/4 lg:w-3/4 '>
+                <div className='card flex flex-col justify-around  items-center'>
                     <div className='circle avatar bg-gray'>
 
                     </div>
@@ -17,10 +17,10 @@ function Discover() {
                         alerts when new properties match your search
                         criteria.
                     </p>
-                    <button className='mb-12 text-base'>See More</button>
+                    <button className='text-base border border-red py-3 px-5 rounded-md'>See More</button>
                     
                 </div>
-                <div className='card flex flex-col justify-between  items-center '>
+                <div className='card flex flex-col justify-around  items-center '>
                     <div className='circle avatar bg-gray'>
                         </div>
                         <h3 className='mt-5'>Property Alerts</h3>
@@ -29,10 +29,10 @@ function Discover() {
                             alerts when new properties match your search
                             criteria.
                         </p>
-                        <button className='mb-12 text-base'>See More</button>
+                        <button className='text-base border border-red py-3 px-5 rounded-md'>See More</button>
                        
                     </div>
-                <div className='card flex flex-col justify-center items-center justify-between '>
+                <div className='card flex flex-col justify-around items-center justify-between '>
                 <div className='circle avatar bg-gray'>
                     </div>
                     <h3 className='mt-5'>Property Alerts</h3>
@@ -41,7 +41,7 @@ function Discover() {
                         alerts when new properties match your search
                         criteria.
                     </p>
-                    <button className='mb-12 text-base'>See More</button>
+                    <button className='text-base border border-red py-3 px-5 rounded-md'>See More</button>
                     
                 </div>
             </div>

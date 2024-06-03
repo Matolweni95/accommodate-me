@@ -35,11 +35,12 @@ const SideNav = ({ children }) => {
         { title: "Dashboard", src: Chart_fill },
         { title: "Applications", src: Chat },
         { title: "Profile", src: User, gap: true },
-        { title: "Schedule ", src: Calendar },
+        { title: "Issues ", src: Calendar },
         { title: "Search", src: Search },
         { title: "Tenant", src: Chart },
         { title: "Rooms ", src: Folder, gap: true },
-        { title: "Setting", src: Setting },
+        { title: "Application", src: Setting },
+        { title: "Announcements", src: Chat },
     ];
 
     const handleMenuClick = (title) => {
@@ -82,6 +83,7 @@ const SideNav = ({ children }) => {
                 </div>
                 <ul className="pt-6">
                     {Menus.map((Menu, index) => (
+                        <Link to={`/${Menu.title.toLowerCase()}`} className="">
                         <li
                             key={index}
                             className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray text-sm items-center gap-x-4 
@@ -90,13 +92,13 @@ const SideNav = ({ children }) => {
                             } `}
                             onClick={() => handleMenuClick(Menu.title)}
                         >
-                            <Link to={`/${Menu.title.toLowerCase()}`} className="flex items-center">
+                            
                             <img src={`${Menu.src}`} />
                             <span className={`${!open && "hidden"} origin-left duration-200`}>
                                 {Menu.title}
                             </span>
-                            </Link>
                         </li>
+                        </Link>
                     ))}
                 </ul>
             </div>

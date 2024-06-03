@@ -8,7 +8,7 @@ import site from '../assets/Site_Logo.svg'
 function ResidenceView() {
   return (
     <div>
-        <SideNav>
+       
             <div className='card flex flex-wrap gap-5 items-center justify-around' style={{ height: 'calc(100% - 1rem)' }}>
                 <div className='card_holder bg-blue flex rounded-lg justify-around flex-col w-[300px] h-[300px] items-center'>
                     <h1 className='text-center'>South Point</h1>
@@ -21,6 +21,20 @@ function ResidenceView() {
                     <h1 className='text-center'>South Point</h1>
                     <div>
                         <img src={homi} width={250}/>
+                    </div>
+                </div>
+
+                <div className='card_holder bg-blue flex rounded-lg justify-around flex-col w-[300px] h-[300px] items-center'>
+                    <h1 className='text-center'>South Point</h1>
+                    <div>
+                        <img src={res365} width={250}/>
+                    </div>
+                </div>
+
+                <div className='card_holder bg-blue flex rounded-lg justify-around flex-col w-[300px] h-[300px] items-center'>
+                    <h1 className='text-center'>South Point</h1>
+                    <div>
+                        <img src={res365} width={250}/>
                     </div>
                 </div>
 
@@ -52,7 +66,7 @@ function ResidenceView() {
                     </div>
                 </div>
             </div>
-        </SideNav>
+        
     </div>
   )
 }

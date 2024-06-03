@@ -16,6 +16,7 @@ import AdminIssueView from './component/AdminIssueView'
 import Login from './component/Login';
 import { createContext, useContext  } from 'react'
 import ResidenceApplication from './component/Residenceapplication'
+import AdminAnnouncements from './component/AdminAnnouncements'
 export const MyContext = createContext({});
 
 function App() {
@@ -31,11 +32,14 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<CompanyDashboard />} />
         <Route path="/applications" element={<ApplicationList />} />
-        {/* <Route path="/profile" element={<CompanyProfile />} /> */}
+        <Route path="/profile" element={<CompanyProfile />} />
         <Route path="/rooms" element={<RoomCheck />} />
         <Route path="/search" element={<SearchPortal />} />
         <Route path="/tenant" element={<TenantList />} />
         <Route path="/view" element={<ApplicationView />} />
+        <Route path="/issues" element={<AdminIssueView />} />
+        <Route path="/application" element={<ResidenceApplication />} />
+        <Route path="/announcements" element={<AdminAnnouncements />} />
       </Routes>
     </BrowserRouter>
   )

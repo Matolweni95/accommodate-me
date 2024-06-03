@@ -1,8 +1,10 @@
 import React from 'react';
 import '../residence.css'
+import SideNav from './TempSideNav';
 
 function Residenceapplication() {
   return (
+    <SideNav>
     <div className='bg-newbg h-screen flex items-center justify-center'>
         <div className='flex bg-white p-4 rounded-lg gap-8'>
             <div className='banner flex pl-8'>
@@ -99,6 +101,7 @@ function Residenceapplication() {
             </div>
         </div>
     </div>
+    </SideNav>
   )
 }
 

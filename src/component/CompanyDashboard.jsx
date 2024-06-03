@@ -5,7 +5,7 @@ import ActivityComponent from './ActivityComponent'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import '../../src/App.css'
-
+import { supabase } from './supabase';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -29,6 +29,30 @@ const data = {
   };
 
 function CompanyDashboard() {
+
+    useEffect (() => {
+        const fetchStatus = async () => {
+          try {
+            const fetchedId = localStorage.getItem('userId')
+            const { data: userid, error} = await supabase
+            .from('user')
+            .select('status')
+            .eq('user_id', fetchedId)
+
+            const status = (userid[0].status)
+    
+            // const { data: userstatus, error} = await supabase
+            // .from('user')
+            // .select('status')
+            // .eq()
+            
+          } catch(error) {
+            console.error('An unexpected error occurred:', error);
+
+          }
+        }
+    fetchStatus()
+    }, [])
     
   return (
     <div>
